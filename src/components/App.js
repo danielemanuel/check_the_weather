@@ -22,10 +22,14 @@ export default class App extends React.Component{
 		const { weather } = this.props;
 
 		return(
-			<div>
-				<h1>WeatherCheck:</h1>
-				<Weather weather = { weather }/>
-				<LocationForm onLocationChange= { this.onLocationChange.bind(this) } />
+			<div className= 'container'>
+				<div className="row">
+					<div className="text-center col-md-6 col-md-offset-3">
+						<h1>WeatherCheck:</h1>
+						<Weather weather = { weather }/>
+						<LocationForm onLocationChange= { this.onLocationChange.bind(this) } />
+					</div>
+				</div>
 			</div>
 		)
 	}

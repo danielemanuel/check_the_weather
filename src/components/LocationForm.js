@@ -5,12 +5,17 @@ export default class LocationForm extends React.Component{
 		return(
 			<div>
 				<h3>Change Location</h3>
+				
 				<form onSubmit= { this.changeLocation.bind(this) }>
-					<input type='text' ref='city' placeholder='Enter city' />
+				<div className='form-group'>
+					<input type='text' className='form-control' ref='city' placeholder='Enter city' />
+				</div>
 					<br />
-					<input type='text' ref='state' placeholder='Enter state' />
+				<div className='form-group'>
+					<input type='text' className='form-control' ref='state' placeholder='Enter state' />
+				</div>
 					<br />
-					<input type='submit' value="Submit" />
+					<input className='btn btn-primary btn-block' type='submit' value="Submit" />
 
 				</form>
 			</div>
