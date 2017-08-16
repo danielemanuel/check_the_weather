@@ -20,11 +20,11 @@ export default class App extends React.Component{
 	render(){
 
 		const { weather } = this.props;
-		console.log(weather)
+
 		return(
 			<div>
 				<h1>WeatherCheck:</h1>
-				<Weather />
+				<Weather weather = { weather }/>
 				<LocationForm />
 			</div>
 		)
