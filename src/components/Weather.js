@@ -9,7 +9,6 @@ export default class Weather extends React.Component{
 
 		return(
 			<div>
-				<h1>Weather component</h1>
 				<h3> { this.props.weather.current_observation.display_location.full} </h3>
 				<h3> { this.props.weather.current_observation.weather} </h3>
 				<img src={this.props.weather.current_observation.icon_url } />

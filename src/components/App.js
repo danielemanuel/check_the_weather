@@ -25,8 +25,12 @@ export default class App extends React.Component{
 			<div>
 				<h1>WeatherCheck:</h1>
 				<Weather weather = { weather }/>
-				<LocationForm />
+				<LocationForm onLocationChange= { this.onLocationChange.bind(this) } />
 			</div>
 		)
+	}
+
+	onLocationChange(location){
+		this.props.dispatch(fetchWeather({city: location.city , state: location.state }));
 	}
 }
